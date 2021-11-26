@@ -12,14 +12,14 @@ if [[ $# -eq 4 ]];then
 	 
 	else
 		echo "El archivo fue encontrado se procede a realizar el cambio"
-		opcion=$(ls -l tarea.sh| awk '{print $4}')
+		opcion=$3
 		echo $opcion
 		if [[ $opcion = "-p" ]]; then
-			chmod $4 /home/Tarea2_SistemasOperativos/tarea.sh
+			chmod $4 Modificaarchivo.sh
 		elif [[ $opcion = "-d" ]]; then
-			chown $4 /home/Tarea2_SistemasOperativos/tarea.sh
+			chown $4 Modificaarchivo.sh
 		elif [[ $opcion = "-g" ]]; then
-			chgrp $4 /home/Tarea2_SistemasOperativos/tarea.sh
+			chgrp $4 Modificaarchivo.sh
 		else
 			echo "Opcion no valida"
 		fi
