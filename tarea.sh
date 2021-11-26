@@ -12,7 +12,7 @@ if [[ $# -eq 4 ]];then
 	 
 	else
 		echo "El archivo fue encontrado se procede a realizar el cambio"
-		opcion=$()
+		opcion=$(ls -l tarea.sh| awk '{print $4}')
 		echo $opcion
 		if [[ $opcion = "-p" ]]; then
 			chmod $4 /home/Tarea2_SistemasOperativos/tarea.sh
