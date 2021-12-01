@@ -22,15 +22,15 @@ if [[ $# -eq 4 ]];then
 		
 		#Cambia los permisos del archivo 
 		if [[ $opcion = "-p" ]]; then
-			chmod $4 Modificaarchivo.sh
+			chmod $4 $1
 		
 		#Cambia el dueño del archivo
 		elif [[ $opcion = "-d" ]]; then
-			chown $4 Modificaarchivo.sh
+			chown $4 $1
 		
 		#Cambia el grupo del archivo
 		elif [[ $opcion = "-g" ]]; then
-			chgrp $4 Modificaarchivo.sh
+			chgrp $4 $1
 		
 		#Si no se cumple ninguno de los parametros
 		#La opcion no es valida
